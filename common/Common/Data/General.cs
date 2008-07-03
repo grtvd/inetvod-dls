@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -19,12 +19,12 @@ namespace iNetVOD.Common.Data
 		#endregion
 
 		#region Fields
-		private TString fINetVODServiceURL;
+		private TString fServiceURL;
 		private TInt32 fLoopIntervalSecs;
 		#endregion
 
 		#region Properties
-		public TString iNetVODServiceURL { get { return fINetVODServiceURL; } }
+		public TString ServiceURL { get { return fServiceURL; } }
 		public TInt32 LoopIntervalSecs  { get { return fLoopIntervalSecs; } }
 		#endregion
 
@@ -38,13 +38,13 @@ namespace iNetVOD.Common.Data
 		#region Implementation
 		public void ReadFrom(DataReader reader)
 		{
-			fINetVODServiceURL = reader.ReadString("iNetVODServiceURL", 500);
+			fServiceURL = reader.ReadString("ServiceURL", 500);
 			fLoopIntervalSecs = reader.ReadInt("LoopIntervalSecs"); 
 		}
 
 		public void WriteTo(DataWriter writer)
 		{
-			writer.WriteString("iNetVODServiceURL", fINetVODServiceURL, 500);
+			writer.WriteString("ServiceURL", fServiceURL, 500);
 			writer.WriteInt("LoopIntervalSecs", fLoopIntervalSecs);
 		}
 		#endregion

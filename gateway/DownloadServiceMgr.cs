@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006-2007 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -10,7 +10,7 @@ using System.Reflection;
 using iNetVOD.Common.Core;
 using iNetVOD.Common.Data;
 
-namespace iNetVOD.MCE.Gateway
+namespace iNetVOD.DLS.Gateway
 {
 	public class DownloadServiceMgr : IObjectSafety
 	{

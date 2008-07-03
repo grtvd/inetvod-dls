@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -82,12 +82,12 @@ namespace iNetVOD.Common.Data
 @"<?xml version=""1.0"" encoding=""utf-8""?>
 <Config>
   <General>
-    <iNetVODServiceURL>http://api.inetvod.com/inetvod/playerapi/xml</iNetVODServiceURL>
+    <ServiceURL>http://api.stormmediaplayer.com/webapi/playerapi/xml</ServiceURL>
     <LoopIntervalSecs>300</LoopIntervalSecs>
   </General>
   <Player>
     <ManufacturerID>inetvod</ManufacturerID>
-    <ModelNo>mce-dls</ModelNo>
+    <ModelNo>windls</ModelNo>
     <SerialNo>{0}</SerialNo>
     <Version>1.0.0000</Version>
   </Player>

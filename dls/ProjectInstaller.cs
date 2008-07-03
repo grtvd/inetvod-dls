@@ -1,9 +1,13 @@
+#region Copyright
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
+// iNetVOD Confidential and Proprietary.  See LEGAL.txt.
+#endregion
 using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Configuration.Install;
 
-namespace iNetVOD.MCE.DSL
+namespace iNetVOD.DSL
 {
 	/// <summary>
 	/// Summary description for ProjectInstaller.

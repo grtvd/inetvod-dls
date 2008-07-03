@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -240,9 +240,10 @@ namespace iNetVOD.Common.Data
 			Stream stream = new FileStream(fUserFilePath, FileMode.CreateNew, FileAccess.ReadWrite, FileShare.None);
 			try
 			{
-				string localShowPath = Path.Combine(Path.GetFullPath(Path.Combine(Path.Combine(
-					Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),
-					".."), "Documents")), "iNetVOD");
+				string localShowPath = "C:\\Users\\Public\\Videos";	//first try for Vista
+				if(!Directory.Exists(localShowPath))
+					localShowPath = "C:\\Documents and Settings\\All Users\\Documents\\My Videos";	//then try for XP
+				localShowPath = Path.Combine(localShowPath, "Storm Media Player");
 
 				StreamWriter streamWriter = new StreamWriter(stream, Encoding.UTF8);
 				streamWriter.Write(String.Format(

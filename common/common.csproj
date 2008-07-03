@@ -1,7 +1,7 @@
 <VisualStudioProject>
     <CSHARP
         ProjectType = "Local"
-        ProductVersion = "7.10.3077"
+        ProductVersion = "7.10.6030"
         SchemaVersion = "2.0"
         ProjectGuid = "{9C0BABD7-0D1F-462D-92C9-E6E4B87011E5}"
     >
@@ -9,7 +9,7 @@
             <Settings
                 ApplicationIcon = ""
                 AssemblyKeyContainerName = ""
-                AssemblyName = "iNetVOD.MCE.Common"
+                AssemblyName = "storm.common"
                 AssemblyOriginatorKeyFile = ""
                 DefaultClientScript = "JScript"
                 DefaultHTMLPageLayout = "Grid"
@@ -18,7 +18,7 @@
                 OutputType = "Library"
                 PreBuildEvent = ""
                 PostBuildEvent = ""
-                RootNamespace = "iNetVOD.MCE"
+                RootNamespace = "iNetVOD.Common"
                 RunPostBuildEvent = "OnBuildSuccess"
                 StartupObject = ""
             >

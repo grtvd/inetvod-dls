@@ -1,11 +1,11 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
 using System.Runtime.InteropServices;
 
-namespace iNetVOD.MCE.Gateway
+namespace iNetVOD.DLS.Gateway
 {
 	/// <summary>
 	/// See Internet SDK, IObjectSafety.

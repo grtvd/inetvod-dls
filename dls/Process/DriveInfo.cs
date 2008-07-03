@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 using iNetVOD.Common.Data;
 
-namespace iNetVOD.MCE.DSL.Process
+namespace iNetVOD.DSL.Process
 {
 	public class DriveInfo
 	{

@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -9,9 +9,9 @@ using System.Timers;
 
 using iNetVOD.Common.Core;
 using iNetVOD.Common.Data;
-using iNetVOD.MCE.DSL.Process;
+using iNetVOD.DSL.Process;
 
-namespace iNetVOD.MCE.DSL
+namespace iNetVOD.DSL
 {
 #if DEBUG
 	public class AppService
@@ -19,7 +19,7 @@ namespace iNetVOD.MCE.DSL
 	public class AppService : System.ServiceProcess.ServiceBase
 #endif
 	{
-		public static string Name = "iNetVOD MCE Download Service";
+		public static string Name = "Storm Download Service";
 		private static int SleepSecs = 2;
 
 		/// <summary> 

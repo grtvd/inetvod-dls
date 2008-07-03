@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 using iNetVOD.Common.Data;
 
-namespace iNetVOD.MCE.install.ca
+namespace iNetVOD.DLS.install.ca
 {
 	[RunInstaller(true)]
 	public class InstallCustomAction : System.Configuration.Install.Installer
@@ -64,7 +64,7 @@ namespace iNetVOD.MCE.install.ca
 			}
 			catch(Exception e)
 			{
-				String msg = String.Format("A failure occurred while creating the iNetVOD data files, Message: {0}.",
+				String msg = String.Format("A failure occurred while creating the Storm data files, Message: {0}.",
 					e.Message);
 				MessageBox.Show(msg);
 			}
@@ -79,7 +79,7 @@ namespace iNetVOD.MCE.install.ca
 				String exe = Path.Combine(Path.GetFullPath(Path.Combine(Environment.SystemDirectory,
 					"..\\eHome\\")), "RegisterMCEApp.exe");
 				String work = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-				String args = (uninstall ? "/u " : "") + "/allusers iNetVOD.reg.xml";
+				String args = (uninstall ? "/u " : "") + "/allusers mce-reg.xml";
 
 				//MessageBox.Show(exe);  
 				//MessageBox.Show(work);
@@ -102,7 +102,7 @@ namespace iNetVOD.MCE.install.ca
 			}
 			catch(Exception e)
 			{
-				String msg = String.Format("A failure occurred while registering iNetVOD under Media Center, Message: {0}.",
+				String msg = String.Format("A failure occurred while registering Storm under Media Center, Message: {0}.",
 					e.Message);
 
 				if(!raiseFailure)

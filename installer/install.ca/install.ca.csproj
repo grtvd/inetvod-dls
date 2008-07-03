@@ -9,7 +9,7 @@
             <Settings
                 ApplicationIcon = ""
                 AssemblyKeyContainerName = ""
-                AssemblyName = "iNetVOD.MCE.install.ca"
+                AssemblyName = "storm.dls.install.ca"
                 AssemblyOriginatorKeyFile = ""
                 DefaultClientScript = "JScript"
                 DefaultHTMLPageLayout = "Grid"
@@ -18,7 +18,7 @@
                 OutputType = "Library"
                 PreBuildEvent = ""
                 PostBuildEvent = ""
-                RootNamespace = "iNetVOD.MCE.install.ca"
+                RootNamespace = "iNetVOD.DLS.install.ca"
                 RunPostBuildEvent = "OnBuildSuccess"
                 StartupObject = ""
             >
@@ -75,9 +75,9 @@
                     HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Management.dll"
                 />
                 <Reference
-                    Name = "iNetVOD.MCE.Common"
-                    AssemblyName = "iNetVOD.MCE.Common"
-                    HintPath = "..\Files\iNetVOD.MCE.Common.dll"
+                    Name = "storm.common"
+                    AssemblyName = "storm.common"
+                    HintPath = "..\Files\storm.common.dll"
                 />
             </References>
         </Build>

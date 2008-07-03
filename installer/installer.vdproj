@@ -3,7 +3,7 @@
 "VSVersion" = "3:701"
 "ProjectType" = "8:{2C2AF0D9-9B47-4FE5-BEF2-169778172667}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:iNetVOD.MCE"
+"ProjectName" = "8:DLS"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -93,7 +93,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\inetvod.mce-1.0.4.msi"
+        "OutputFilename" = "8:Release\\storm.dls-1.0.4.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -111,7 +111,7 @@
         {
             "{0C9D821E-95BB-411F-BE03-2864360EBF94}:_14E521A0B6F249568C3039FA7193EE92"
             {
-            "Name" = "8:iNetVOD.MCE.DLS.exe"
+            "Name" = "8:storm.dls.exe"
             "Condition" = "8:"
             "Object" = "8:_70A920CD6F384418B3AE1F79504C8E5B"
             "FileType" = "3:2"
@@ -125,7 +125,7 @@
             }
             "{0C9D821E-95BB-411F-BE03-2864360EBF94}:_227312DD9914433695B468645D32C1FC"
             {
-            "Name" = "8:Primary output from iNetVOD.MCE.install.ca (Release .NET)"
+            "Name" = "8:Primary output from install.ca (Release .NET)"
             "Condition" = "8:"
             "Object" = "8:_ADA27F3782DF4FFC92F938FA78DCEB4A"
             "FileType" = "3:1"
@@ -139,7 +139,7 @@
             }
             "{0C9D821E-95BB-411F-BE03-2864360EBF94}:_473A47FB03C94643B452EE0FE46F6B29"
             {
-            "Name" = "8:Primary output from iNetVOD.MCE.install.ca (Release .NET)"
+            "Name" = "8:Primary output from install.ca (Release .NET)"
             "Condition" = "8:"
             "Object" = "8:_ADA27F3782DF4FFC92F938FA78DCEB4A"
             "FileType" = "3:1"
@@ -153,7 +153,7 @@
             }
             "{0C9D821E-95BB-411F-BE03-2864360EBF94}:_63776F2D4E254570A7F2EAACF13EEE8F"
             {
-            "Name" = "8:Primary output from iNetVOD.MCE.install.ca (Release .NET)"
+            "Name" = "8:Primary output from install.ca (Release .NET)"
             "Condition" = "8:"
             "Object" = "8:_ADA27F3782DF4FFC92F938FA78DCEB4A"
             "FileType" = "3:1"
@@ -167,7 +167,7 @@
             }
             "{0C9D821E-95BB-411F-BE03-2864360EBF94}:_9B6119EA4BF846D4B1923D4179E32BF0"
             {
-            "Name" = "8:iNetVOD.MCE.DLS.exe"
+            "Name" = "8:storm.dls.exe"
             "Condition" = "8:"
             "Object" = "8:_70A920CD6F384418B3AE1F79504C8E5B"
             "FileType" = "3:2"
@@ -181,7 +181,7 @@
             }
             "{0C9D821E-95BB-411F-BE03-2864360EBF94}:_E7AEC576241148B68F11F64A19C660E6"
             {
-            "Name" = "8:iNetVOD.MCE.DLS.exe"
+            "Name" = "8:storm.dls.exe"
             "Condition" = "8:"
             "Object" = "8:_70A920CD6F384418B3AE1F79504C8E5B"
             "FileType" = "3:2"
@@ -222,16 +222,16 @@
             {
             "AssemblyRegister" = "3:2"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:iNetVOD.MCE.Gateway, Version=1.0.2889.42056, Culture=neutral"
+            "AssemblyAsmDisplayName" = "8:storm.gateway, Version=1.0.2889.42056, Culture=neutral"
                 "ScatterAssemblies"
                 {
                     "_0C6AB2A5B289498FAEA7FA9E09A7F588"
                     {
-                    "Name" = "8:iNetVOD.MCE.Gateway.dll"
+                    "Name" = "8:storm.gateway.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Files\\iNetVOD.MCE.Gateway.dll"
+            "SourcePath" = "8:Files\\storm.gateway.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CAD27BFD370841F199F55B4624E1E651"
@@ -251,8 +251,8 @@
             }
             "{A582A373-4685-4296-BEFE-614B80A702C3}:_6DB0CEB1558447AF9D69294B2D130D3D"
             {
-            "SourcePath" = "8:Files\\iNetVOD.reg.xml"
-            "TargetName" = "8:iNetVOD.reg.xml"
+            "SourcePath" = "8:Files\\mce-reg.xml"
+            "TargetName" = "8:mce-reg.xml"
             "Tag" = "8:"
             "Folder" = "8:_CAD27BFD370841F199F55B4624E1E651"
             "Condition" = "8:"
@@ -273,16 +273,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:iNetVOD.MCE.DLS, Version=1.0.2889.42056, Culture=neutral"
+            "AssemblyAsmDisplayName" = "8:storm.dls, Version=1.0.2889.42056, Culture=neutral"
                 "ScatterAssemblies"
                 {
                     "_70A920CD6F384418B3AE1F79504C8E5B"
                     {
-                    "Name" = "8:iNetVOD.MCE.DLS.exe"
+                    "Name" = "8:storm.dls.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Files\\iNetVOD.MCE.DLS.exe"
+            "SourcePath" = "8:Files\\storm.dls.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CAD27BFD370841F199F55B4624E1E651"
@@ -304,16 +304,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:iNetVOD.MCE.Common, Version=1.0.2889.42055, Culture=neutral"
+            "AssemblyAsmDisplayName" = "8:storm.common, Version=1.0.2889.42055, Culture=neutral"
                 "ScatterAssemblies"
                 {
                     "_B089FE521895F7997E73F321E3887B60"
                     {
-                    "Name" = "8:iNetVOD.MCE.Common.dll"
+                    "Name" = "8:storm.common.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:iNetVOD.MCE.Common.dll"
+            "SourcePath" = "8:storm.common.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CAD27BFD370841F199F55B4624E1E651"
@@ -383,7 +383,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:iNetVOD Media Center Edition"
+        "ProductName" = "8:Storm Download Service"
         "ProductCode" = "8:{610110C8-7E83-4DA5-9E28-D1547D7E0DCA}"
         "PackageCode" = "8:{4E939E76-9185-4D67-BF57-BC47B57645DF}"
         "UpgradeCode" = "8:{ACD907DA-672E-4361-830B-6A964D39C4BA}"
@@ -391,12 +391,13 @@
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "ProductVersion" = "8:1.0.4"
-        "Manufacturer" = "8:iNetVOD"
+        "Manufacturer" = "8:Storm Media Player"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:iNetVOD Media Center Edition"
+        "ProductName" = "8:Storm Download Service"
+        "Title" = "8:"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:iNetVOD"
+        "ARPCONTACT" = "8:Storm Media Player"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -901,7 +902,7 @@
         {
             "{8062640A-2EEE-46E9-AB67-688E9A886E9F}:_ADA27F3782DF4FFC92F938FA78DCEB4A"
             {
-            "SourcePath" = "8:install.ca\\obj\\Release\\iNetVOD.MCE.install.ca.dll"
+            "SourcePath" = "8:install.ca\\obj\\Release\\storm.dls.install.ca.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CAD27BFD370841F199F55B4624E1E651"

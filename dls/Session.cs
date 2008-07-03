@@ -1,5 +1,5 @@
 #region Copyright
-// Copyright © 2006 iNetVOD, Inc. All Rights Reserved.
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
 // iNetVOD Confidential and Proprietary.  See LEGAL.txt.
 #endregion
 using System;
@@ -10,7 +10,7 @@ using iNetVOD.Common.Core;
 using iNetVOD.Common.Data;
 using iNetVOD.Common.Request;
 
-namespace iNetVOD.MCE.DSL
+namespace iNetVOD.DSL
 {
 	public class Session
 	{
@@ -94,7 +94,7 @@ namespace iNetVOD.MCE.DSL
 			/************************************************************************/
 			ConfigDataMgr configDataMgr = ConfigDataMgr.Initialize();
 			Config config = configDataMgr.GetConfig();
-			fNetworkURL = config.General.iNetVODServiceURL;
+			fNetworkURL = config.General.ServiceURL;
 			fPlayer = config.Player;
 
 			DataRequestor.Initialize(fNetworkURL);

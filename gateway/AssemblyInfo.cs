@@ -1,3 +1,7 @@
+#region Copyright
+// Copyright © 2006-2008 iNetVOD, Inc. All Rights Reserved.
+// iNetVOD Confidential and Proprietary.  See LEGAL.txt.
+#endregion
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
