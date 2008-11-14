@@ -106,7 +106,8 @@ public class Logger
 			}
 		}
 
-		System.out.println(text);
+		if (System.out != null)
+			System.out.println(text);
 	}
 
 	public static void logInfo(Class objClass, String method, String message, Exception e)

@@ -42,8 +42,7 @@ public class DownloadServiceMgr extends Applet
 
 				try
 				{
-					if(System.out != null)
-						System.out.println("waiting to stop");
+					Logger.logInfo(this, "stopGateway", "waiting to stop");
 					Thread.sleep(WaitToStopGatewayMillis);
 				}
 				catch(InterruptedException ignore)

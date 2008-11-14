@@ -76,12 +76,10 @@ class DownloadServiceGateway extends Thread
 		fIsRunning = true;
 		while(!fStopRequested)
 		{
-			Logger.logInfo(this, "run", "begin");
 			checkRefresh();
 			checkSetUserCredantials();
 			checkSetNextProcessNow();
 			checkPlayRendtedShow();
-			Logger.logInfo(this, "run", "end");
 
 			try
 			{
