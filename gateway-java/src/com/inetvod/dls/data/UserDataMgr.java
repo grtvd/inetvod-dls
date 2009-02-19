@@ -1,5 +1,5 @@
 /**
- * Copyright © 2008 iNetVOD, Inc. All Rights Reserved.
+ * Copyright © 2008-2009 iNetVOD, Inc. All Rights Reserved.
  * iNetVOD Confidential and Proprietary.  See LEGAL.txt.
  */
 package com.inetvod.dls.data;
@@ -10,6 +10,7 @@ import java.io.File;
 
 import com.inetvod.common.core.DateUtil;
 import com.inetvod.common.core.LockableRandomAccessFile;
+import com.inetvod.common.core.StreamUtil;
 import com.inetvod.common.core.XmlDataReader;
 import com.inetvod.common.core.XmlDataWriter;
 import com.inetvod.dls.AppSettings;
@@ -46,11 +47,11 @@ public class UserDataMgr
 		//TODO fNextProcessTimeIncMillis = nextProcessTimeIncSecs * 1000;
 	}
 
-//	public static void createNew()
-//	{
-//		UserDataMgr userDataMgr = new UserDataMgr(AppSettings.AppDataPath, 0);
-//		userDataMgr.CreateDataFile();
-//	}
+	public static void createNew() throws Exception
+	{
+		UserDataMgr userDataMgr = new UserDataMgr(AppSettings.getAppDataPath(), 0);
+		userDataMgr.createDataFile();
+	}
 
 	public static UserDataMgr initialize(long nextProcessTimeIncSecs) throws Exception
 	{
@@ -182,6 +183,25 @@ public class UserDataMgr
 				lockableFile.close();
 			}
 		}
+	}
+
+	private void createDataFile() throws Exception
+	{
+		if(!fUserFilePath.getParentFile().exists())
+			fUserFilePath.getParentFile().mkdirs();
+
+		if(fUserFilePath.exists())
+			return;
+
+		String userFileXml = String.format(
+			"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+			+ "<UserData>"
+				+ "<Settings>"
+					+ "<LocalShowPath>%s</LocalShowPath>"
+					+ "<MaxSizeForShows>20</MaxSizeForShows>"
+				+ "</Settings>"
+			+ "</UserData>", AppSettings.determineLocalShowPath());
+		StreamUtil.stringToFile(userFileXml, fUserFilePath);
 	}
 
 	private UserData readDataFile(LockableRandomAccessFile lockableFile) throws Exception

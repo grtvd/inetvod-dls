@@ -1,5 +1,5 @@
 /**
- * Copyright © 2008 iNetVOD, Inc. All Rights Reserved.
+ * Copyright © 2008-2009 iNetVOD, Inc. All Rights Reserved.
  * iNetVOD Confidential and Proprietary.  See LEGAL.txt.
  */
 package com.inetvod.dls.data;
@@ -65,21 +65,20 @@ public class ConfigDataMgr
 			return;
 
 		String configFileXml = String.format(
-"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
-+ "<Config>"
-+ "  <General>"
-+ "    <ServiceURL>http://api.stormmediaplayer.com/webapi/playerapi/xml</ServiceURL>"
-+ "    <LoopIntervalSecs>300</LoopIntervalSecs>"
-+ "  </General>"
-+ "  <Player>"
-+ "    <ManufacturerID>inetvod</ManufacturerID >"
-+ "    <ModelNo>windls</ModelNo>"
-+ "    <SerialNo>{0}</SerialNo>"
-+ "    <Version>1.0.0000</Version>"
-+ "  </Player>"
-+ "</Config>", UUID.randomUUID().toString());
-		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(configFileXml.getBytes("UTF-8"));
-		StreamUtil.streamToFile(byteArrayInputStream, fConfigFilePath);
+			"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+			+ "<Config>"
+				+ "<General>"
+					+ "<ServiceURL>http://api.stormmediaplayer.com/webapi/playerapi/xml</ServiceURL>"
+					+ "<LoopIntervalSecs>300</LoopIntervalSecs>"
+				+ "</General>"
+				+ "<Player>"
+					+ "<ManufacturerID>inetvod</ManufacturerID>"
+					+ "<ModelNo>windls</ModelNo>"
+					+ "<SerialNo>%s</SerialNo>"
+					+ "<Version>1.0.0000</Version>"
+				+ "</Player>"
+			+ "</Config>", UUID.randomUUID().toString());
+		StreamUtil.stringToFile(configFileXml, fConfigFilePath);
 	}
 
 	private void refresh() throws Exception
