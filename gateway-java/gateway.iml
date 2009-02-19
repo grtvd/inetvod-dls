@@ -26,7 +26,6 @@
     <orderEntry type="library" name="logging-log4j-1.2.14" level="application" />
     <orderEntry type="library" name="javamail-1.3.2" level="application" />
     <orderEntry type="library" name="commons-codec-1.3" level="application" />
-    <orderEntryProperties />
   </component>
 </module>
 
