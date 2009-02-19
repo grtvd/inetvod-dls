@@ -1,5 +1,5 @@
 /**
- * Copyright © 2008 iNetVOD, Inc. All Rights Reserved.
+ * Copyright © 2008-2009 iNetVOD, Inc. All Rights Reserved.
  * iNetVOD Confidential and Proprietary.  See LEGAL.txt.
  */
 package com.inetvod.dls;
@@ -25,20 +25,17 @@ public class AppSettings
 
 	private static void initialize()
 	{
-		File file = new File("c:/ProgramData", AppDirName);
-		if(file.exists())
-		{
-			fAppDataPath = file.getAbsolutePath();
-			return;
-		}
-
-		file = new File("c:/Documents and Settings/All Users/Application Data", AppDirName);
-		if(file.exists())
-		{
-			fAppDataPath = file.getAbsolutePath();
-			//return;
-		}
+		// Gateway applet can't access restricted directories, so fAppDataPath was changed to match local show path.
+		fAppDataPath = determineLocalShowPath();
 	}
 
 	/* Implementation */
+
+	public static String determineLocalShowPath()
+	{
+		File localShowPath = new File("c:/Users/Public/Videos");	//first try for Vista
+		if(!localShowPath.exists())
+			localShowPath = new File("c:/Documents and Settings/All Users/Documents/My Videos");	//then try for XP
+		return (new File(localShowPath, AppDirName)).getAbsolutePath();
+	}
 }
