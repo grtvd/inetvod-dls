@@ -40,12 +40,14 @@ namespace iNetVOD.DSL
 				if(!fUserID.Equals(UserDataMgr.GetThe().UserLogonID))
 				{
 					fUserID = UserDataMgr.GetThe().UserLogonID;
+					fIsUserLoggedOn = false;
 					fBadUserCredentials = false;
 				}
 
 				if(!fUserPassword.Equals(UserDataMgr.GetThe().UserPIN))
 				{
 					fUserPassword = UserDataMgr.GetThe().UserPIN;
+					fIsUserLoggedOn = false;
 					fBadUserCredentials = false;
 				}
 				
