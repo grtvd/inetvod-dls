@@ -524,7 +524,7 @@
   </component>
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
-    <option name="state" value="svn://svnhome/dev/dls/trunk/gateway-java/gateway.ipr" />
+    <option name="state" value="svn://svnhome/dev/dls/trunk/gateway/gateway.ipr" />
   </component>
   <component name="ProjectModuleManager">
     <modules>
