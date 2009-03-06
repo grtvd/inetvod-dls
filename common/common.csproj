@@ -269,12 +269,12 @@
                     BuildAction = "Compile"
                 />
                 <File
-                    RelPath = "Common\Request\INetVODPlayerRqst.cs"
+                    RelPath = "Common\Request\PingRqst.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
                 <File
-                    RelPath = "Common\Request\PingRqst.cs"
+                    RelPath = "Common\Request\PlayerRqst.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />

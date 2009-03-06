@@ -55,14 +55,13 @@ namespace iNetVOD.Common.Request
 		#endregion
 
 		#region Implementation
-		private INetVODPlayerRqst CreateHeader(Writeable payload)
+		private PlayerRqst CreateHeader(Writeable payload)
 		{
-			INetVODPlayerRqst request;
+			PlayerRqst request;
 			RequestData requestData;
 
-			request = INetVODPlayerRqst.NewInstance();
+			request = PlayerRqst.NewInstance();
 			request.Version = "1.0.0";	//TODO:
-			request.RequestID = Guid.NewGuid().ToString();
 			request.SessionData = fSessionData.ToString();
 
 			requestData = RequestData.NewInstance(payload);
@@ -72,7 +71,7 @@ namespace iNetVOD.Common.Request
 			return request;
 		}
 
-		private Readable ParseHeader(INetVODPlayerResp response)
+		private Readable ParseHeader(PlayerResp response)
 		{
 			fStatusCode = response.StatusCode;
 			fStatusMessage = response.StatusMessage;
@@ -93,7 +92,7 @@ namespace iNetVOD.Common.Request
 		private Readable SendRequest(Writeable payload)
 		{
 			// build the request header
-			INetVODPlayerRqst request = CreateHeader(payload);
+			PlayerRqst request = CreateHeader(payload);
 
 			// build request data
 			MemoryStream requestStream = new MemoryStream();
@@ -110,7 +109,7 @@ namespace iNetVOD.Common.Request
 
 			// read response
 			XmlDataReader responseReader = new XmlDataReader(responseStream);
-			INetVODPlayerResp response = (INetVODPlayerResp)responseReader.ReadObject("INetVODPlayerResp", INetVODPlayerResp.CtorDataReader);
+			PlayerResp response = (PlayerResp)responseReader.ReadObject("PlayerResp", PlayerResp.CtorDataReader);
 
 			// parse response header
 			return ParseHeader(response);

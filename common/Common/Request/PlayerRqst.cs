@@ -5,36 +5,33 @@ using iNetVOD.Common.Core;
 
 namespace iNetVOD.Common.Request
 {
-	public class INetVODPlayerRqst : Writeable
+	public class PlayerRqst : Writeable
 	{
 		#region Constants
 		private static readonly int VersionMaxLength = 16;
-		private static readonly int RequestIDMaxLength = 64;
 		private static readonly int SessionDataMaxLength = Int16.MaxValue;
 		#endregion
 
 		#region Fields
 		private TString fVersion;
-		private TString fRequestID;
 		private TString fSessionData;
 		private RequestData fRequestData;
 		#endregion
 
 		#region Properties
 		public string Version { set { fVersion = new TString(value); } }
-		public string RequestID { set { fRequestID = new TString(value); } }
 		public string SessionData { set { fSessionData = new TString(value); } }
 		public RequestData RequestData { set { fRequestData = value; } }
 		#endregion
 
 		#region Constuction
-		private INetVODPlayerRqst()
+		private PlayerRqst()
 		{
 		}
 
-		public static INetVODPlayerRqst NewInstance()
+		public static PlayerRqst NewInstance()
 		{
-			return new INetVODPlayerRqst();
+			return new PlayerRqst();
 		}
 		#endregion
 
@@ -42,7 +39,6 @@ namespace iNetVOD.Common.Request
 		public void WriteTo(DataWriter writer)
 		{
 			writer.WriteString("Version", fVersion, VersionMaxLength);
-			writer.WriteString("RequestID", fRequestID, RequestIDMaxLength);
 			writer.WriteString("SessionData", fSessionData, SessionDataMaxLength);
 
 			writer.WriteObject("RequestData", fRequestData);
@@ -50,16 +46,14 @@ namespace iNetVOD.Common.Request
 		#endregion
 	}
 
-	public class INetVODPlayerResp : Readable
+	public class PlayerResp : Readable
 	{
 		#region Constants
-		public static readonly ConstructorInfo CtorDataReader = typeof(INetVODPlayerResp).GetConstructor(new Type[] { typeof (DataReader) });
-		private static readonly int RequestIDMaxLength = 64;
+		public static readonly ConstructorInfo CtorDataReader = typeof(PlayerResp).GetConstructor(new Type[] { typeof (DataReader) });
 		private static readonly int StatusMessageMaxLength = 1024;
 		#endregion
 
 		#region Fields
-		private TString fRequestID;
 		private StatusCode fStatusCode;
 		private TString fStatusMessage;
 		private ResponseData fResponseData;
@@ -72,7 +66,7 @@ namespace iNetVOD.Common.Request
 		#endregion
 
 		#region Constuction
-		public INetVODPlayerResp(DataReader reader)
+		public PlayerResp(DataReader reader)
 		{
 			ReadFrom(reader);
 		}
@@ -81,7 +75,6 @@ namespace iNetVOD.Common.Request
 		#region Implementation
 		public void ReadFrom(DataReader reader)
 		{
-			fRequestID = reader.ReadString("RequestID", RequestIDMaxLength);
 			fStatusCode = (StatusCode)reader.ReadInt("StatusCode").Value;
 			fStatusMessage = reader.ReadString("StatusMessage", StatusMessageMaxLength);
 			fResponseData = (ResponseData)reader.ReadObject("ResponseData", ResponseData.CtorDataReader);
